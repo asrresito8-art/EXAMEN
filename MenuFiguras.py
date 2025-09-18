@@ -1,5 +1,4 @@
 from Figuras import Rectangulo, Cuadrado, Circulo, Triangulo #se importa de nuestro archivo las formulas de las figuras 
-
 from blessed import Terminal # para ocupar los colores 
 
 class MenuFiguras: # se empieza el codigo
@@ -16,19 +15,19 @@ class MenuFiguras: # se empieza el codigo
                     return valor
             except ValueError:
                 print(self.term.blod_red("¡Error! Debe ingresar un valor asignado."))
-def mostrar_menu(self):
+    def mostrar_menu(self):
         print(self.term.bold_purple(f"\n        Menú principal "))
         print(self.term.bold_blue(f"\n * Selecciona la figura deseada * "))
-        print(self.term.bold__green("\n1. Rectángulo"))
-        print(self.term.bold_blue("\n2. Cuadrado"))
-        print(self.term.bold_pink("\n3. Círculo"))
-        print(self.term.bold_orange("\n4. Triángulo"))
-        print(self.term.bold_red("\n5. Salir"))
+        print(self.term.bold_green(f"\n1. Rectángulo"))
+        print(self.term.bold_blue(f"\n2. Cuadrado"))
+        print(self.term.bold_pink(f"\n3. Círculo"))
+        print(self.term.bold_orange(f"\n4. Triángulo"))
+        print(self.term.bold_red(f"\n5. Salir"))
         
         opcion = input(self.term.bold_white("\nElige una opción: "))
         return opcion
 
-def seleccionar_figura(self):
+    def seleccionar_figura(self):
         while True:
             opcion = self.mostrar_menu()
 
@@ -63,12 +62,11 @@ def seleccionar_figura(self):
             else:
                 print(self.term.red("Opción no válida. Inténtalo nuevamente."))
             
+    def mostrar_resultados(self, figura):
+        print(self.term.bold_cyan(f"\nResultados para {figura.__class__.__name__}:"))
+        print(self.term.green3(f"Área: {figura.area():.2f}"))
+        print(self.term.green3(f"Perímetro: {figura.perimetro():.2f}\n"))
 
-def mostrar_resultados(self, figura):
-    print(self.term.bold_cyan(f"\nResultados para {figura.__class__.__name__}:"))
-    print(self.term.green3(f"Área: {figura.area():.2f}"))
-    print(self.term.green3(f"Perímetro: {figura.perimetro():.2f}\n"))
-    
 if __name__ == "__main__":
     menu = MenuFiguras()
     menu.seleccionar_figura()
