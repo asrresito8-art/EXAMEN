@@ -42,3 +42,8 @@ def seleccionar_figura(self):
                 lado = self.validar_float("       Ingrese un LADO del cuadrado: ")
                 cuadrado = Cuadrado(lado)
                 self.mostrar_resultados(cuadrado)
+               
+            elif opcion == "3":
+                radio = self.validar_float("      Ingrese el RADIO del círculo: ")
+                circulo = Circulo(radio)
+                self.mostrar_resultados(circulo)
