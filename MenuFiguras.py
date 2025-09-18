@@ -62,4 +62,9 @@ def seleccionar_figura(self):
 
             else:
                 print(self.term.red("Opción no válida. Inténtalo nuevamente."))
-        
+            
+
+def mostrar_resultados(self, figura):
+    print(self.term.bold_cyan(f"\nResultados para {figura.__class__.__name__}:"))
+    print(self.term.green3(f"Área: {figura.area():.2f}"))
+    print(self.term.green3(f"Perímetro: {figura.perimetro():.2f}\n"))
