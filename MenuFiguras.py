@@ -47,3 +47,11 @@ def seleccionar_figura(self):
                 radio = self.validar_float("      Ingrese el RADIO del círculo: ")
                 circulo = Circulo(radio)
                 self.mostrar_resultados(circulo)
+
+            elif opcion == "4":
+                base = self.validar_float(  "Ingrese la BASE del triángulo:  ")
+                altura = self.validar_float("Ingrese la ALTURA del triángulo:")
+                lado1 = self.validar_float( "Ingrese el   LADO1 del triángulo:  ")
+                lado2 = self.validar_float( "Ingrese el   LADO2 del triángulo:  ")
+                triangulo = Triangulo(base, altura, lado1, lado2)
+                self.mostrar_resultados(triangulo)
