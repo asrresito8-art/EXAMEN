@@ -55,3 +55,11 @@ def seleccionar_figura(self):
                 lado2 = self.validar_float( "Ingrese el   LADO2 del triángulo:  ")
                 triangulo = Triangulo(base, altura, lado1, lado2)
                 self.mostrar_resultados(triangulo)
+
+            elif opcion == "5":
+                print(self.term.bold_blue2("¡Gracias por usar el programa!"))
+                break
+
+            else:
+                print(self.term.red("Opción no válida. Inténtalo nuevamente."))
+        
