@@ -32,40 +32,40 @@ class MenuFiguras: # se empieza el codigo
             opcion = self.mostrar_menu()
 
             if opcion == "1":
-                ancho = self.validar_float(self.term.green("\nIngrese el BASE del rectángulo: "))
-                alto = self.validar_float(self.term.green("\nIngrese la ALTURA del rectángulo: "))
+                ancho = self.validar_float(self.term.green2("\nIngrese la BASE del rectángulo: "))
+                alto = self.validar_float(self.term.green2("\nIngrese la ALTURA del rectángulo: "))
                 rectangulo = Rectangulo(ancho, alto)
                 self.mostrar_resultados(rectangulo)
             
             elif opcion == "2":
-                lado = self.validar_float("       Ingrese un LADO del cuadrado: ")
+                lado = self.validar_float(self.term.yellow2("\nIngrese un LADO del cuadrado: "))
                 cuadrado = Cuadrado(lado)
                 self.mostrar_resultados(cuadrado)
                
             elif opcion == "3":
-                radio = self.validar_float("      Ingrese el RADIO del círculo: ")
+                radio = self.validar_float(self.term.purple2("\nIngrese el RADIO del círculo: "))
                 circulo = Circulo(radio)
                 self.mostrar_resultados(circulo)
 
             elif opcion == "4":
-                base = self.validar_float(  "Ingrese la BASE del triángulo:  ")
-                altura = self.validar_float("Ingrese la ALTURA del triángulo:")
-                lado1 = self.validar_float( "Ingrese el   LADO1 del triángulo:  ")
-                lado2 = self.validar_float( "Ingrese el   LADO2 del triángulo:  ")
+                base = self.validar_float(self.term.orange2("\nIngrese la BASE del triángulo:"))
+                altura = self.validar_float(self.term.orange2("\nIngrese la ALTURA del triángulo:"))
+                lado1 = self.validar_float(self.term.orange2("\nIngrese el   LADO 1 del triángulo:"))
+                lado2 = self.validar_float(self.term.orange2("\nIngrese el   LADO 2 del triángulo:"))
                 triangulo = Triangulo(base, altura, lado1, lado2)
                 self.mostrar_resultados(triangulo)
 
             elif opcion == "5":
-                print(self.term.bold_blue2("¡Gracias por usar el programa!"))
+                print(self.term.bold_blue1("        ##¡GRACIAS POR USAR ESTE PROGRAMA !## "))
                 break
 
             else:
-                print(self.term.red("Opción no válida. Inténtalo nuevamente."))
+                print(self.term.blod_red("Opción no válida, Inténtalo nuevamente."))
             
     def mostrar_resultados(self, figura):
-        print(self.term.bold_cyan(f"\nResultados para {figura.__class__.__name__}:"))
-        print(self.term.green3(f"Área: {figura.area():.2f}"))
-        print(self.term.green3(f"Perímetro: {figura.perimetro():.2f}\n"))
+        print(self.term.bold_cyan(f"\nResultados para {figura.__class__.__name__} es:"))
+        print(self.term.green3(f"\nÁrea: {figura.area():.2f}"))
+        print(self.term.blue3(f"\nPerímetro: {figura.perimetro():.2f}\n"))
 
 if __name__ == "__main__":
     menu = MenuFiguras()
