@@ -27,3 +27,13 @@ def mostrar_menu(self):
         
         opcion = input(self.term.bold_white("\nElige una opción: "))
         return opcion
+
+def seleccionar_figura(self):
+        while True:
+            opcion = self.mostrar_menu()
+
+            if opcion == "1":
+                ancho = self.validar_float(self.term.green("\nIngrese el BASE del rectángulo: "))
+                alto = self.validar_float(self.term.green("\nIngrese la ALTURA del rectángulo: "))
+                rectangulo = Rectangulo(ancho, alto)
+                self.mostrar_resultados(rectangulo)
