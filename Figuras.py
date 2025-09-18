@@ -31,3 +31,13 @@ class Triangulo:
 
     def perimetro(self):
         return self.base + self.lado1 + self.lado2
+
+class Circulo:
+    def __init__(self, radio: float):
+        self.radio = radio
+
+    def area(self):
+        return 3.1416 * (self.radio ** 2)
+
+    def perimetro(self):
+        return 2 * 3.1416 * self.radio
