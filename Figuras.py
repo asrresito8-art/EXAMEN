@@ -18,3 +18,16 @@ class Rectangulo:
 
     def perimetro(self):
         return 2 * (self.ancho + self.alto)
+    
+class Triangulo:
+    def __init__(self, base: float, altura: float, lado1: float, lado2: float):
+        self.base = base
+        self.altura = altura
+        self.lado1 = lado1
+        self.lado2 = lado2
+
+    def area(self):
+        return (self.base * self.altura) / 2
+
+    def perimetro(self):
+        return self.base + self.lado1 + self.lado2
