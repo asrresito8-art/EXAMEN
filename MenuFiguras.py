@@ -37,3 +37,8 @@ def seleccionar_figura(self):
                 alto = self.validar_float(self.term.green("\nIngrese la ALTURA del rectángulo: "))
                 rectangulo = Rectangulo(ancho, alto)
                 self.mostrar_resultados(rectangulo)
+            
+            elif opcion == "2":
+                lado = self.validar_float("       Ingrese un LADO del cuadrado: ")
+                cuadrado = Cuadrado(lado)
+                self.mostrar_resultados(cuadrado)
