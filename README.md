@@ -1,6 +1,6 @@
-#BIENVENIDO A MI PROGRAMA# 
+BIENVENIDO A MI PROGRAMA 
 
-##pasos para el programa##
+pasos para el programa
 
    1: Para poder visualisar el programa en la terminal tenemos que crear un entorno vertual lo primero es crear una carpeta base dode tendremos nuestros entorno en mi caso es "programacion" dentro de esa carpeta crearemos un foder que llamaremos "venv" despues en nuestra terminoa utilisando los comandos "cd \programacion" nos dirigera a la carpeta programacion donde tenemos el folder "vnv" por consiguente hay mismo en la termina colocaremos el siguiente comando  "python -m venv" despues de ese pasa ya podremos activar el entorno con el comando "venv/Scripts\activate" pra desactivarlo solo utilisamos "venv/Scripts\deactivate" ya estara creado tu entorno.
    
