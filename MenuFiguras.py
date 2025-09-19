@@ -70,3 +70,4 @@ class MenuFiguras: # se empieza el codigo
 if __name__ == "__main__":
     menu = MenuFiguras()
     menu.seleccionar_figura()
+
